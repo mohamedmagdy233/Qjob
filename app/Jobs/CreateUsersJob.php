@@ -26,7 +26,6 @@ class CreateUsersJob implements ShouldQueue
      */
     public function handle(): void
     {
-        dd($this->users);
 
         foreach ($this->users as $userData) {
             User::create($userData);
